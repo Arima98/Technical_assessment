@@ -1,0 +1,1389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://schemas.datacontract.org/2004/07/BR.Logic">
+  <CompilationType>CSharp</CompilationType>
+  <Description>Trabajar con datos JSON - parsear los datos recibidos y mostrar el resultado en la pantalla.</Description>
+  <Id>744fe808-bd63-422a-ab10-9c3765896b9f</Id>
+  <Logic z:Id="i2" i:type="ExecutedStep">
+    <Childs>
+      <AbstractStep z:Id="i3" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i4" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i5" i:type="CommentStep">
+                <Childs />
+                <Id>bff96366-3f3f-4aff-a5ca-897642d030b0</Id>
+                <Parent z:Ref="i4" />
+                <PropertyValues />
+                <SelectedOptionId i:nil="true" />
+                <IsCollapsed>false</IsCollapsed>
+                <Text>Create database connection
+</Text>
+              </AbstractStep>
+              <AbstractStep z:Id="i6" i:type="ExecutedStep">
+                <Childs />
+                <Id>d77fa393-d70b-40f2-bcc9-d86ad174e6cb</Id>
+                <Parent z:Ref="i4" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i7">
+                    <PropertyName>DataBaseConnectionString</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>SQLConection</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i8">
+                    <PropertyName>DataBaseProvider</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"System.Data.SqlClient"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i9">
+                    <PropertyName>OutSqlConnection</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>Success</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId>0</SelectedOptionId>
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text>Create a database connection</Text>
+                <_activityFullName>Activities.DataBaseSQL.CreateConnection</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i10" i:type="ExecutedStep">
+                <Childs>
+                  <AbstractStep z:Id="i11" i:type="CommentStep">
+                    <Childs />
+                    <Id>87ac32e4-1658-4dfb-be5a-545d77d48790</Id>
+                    <Parent z:Ref="i10" />
+                    <PropertyValues />
+                    <SelectedOptionId i:nil="true" />
+                    <IsCollapsed>false</IsCollapsed>
+                    <Text>Get parameters</Text>
+                  </AbstractStep>
+                  <AbstractStep z:Id="i12" i:type="ExecutedStep">
+                    <Childs />
+                    <Id>1e4540f0-40ef-464e-9ccb-c257da46dc45</Id>
+                    <Parent z:Ref="i10" />
+                    <PropertyValues>
+                      <PropertyValue z:Id="i13">
+                        <PropertyName>Result</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>vTableParameters</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                      <PropertyValue z:Id="i14">
+                        <PropertyName>InSqlConnection</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>Success</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                      <PropertyValue z:Id="i15">
+                        <PropertyName>SqlQuery</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>"SELECT TOP (1000) [nombre_parametro] ,[valor] FROM [PruebaTecnica].[dbo].[Parametros]"</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                    </PropertyValues>
+                    <SelectedOptionId>0</SelectedOptionId>
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>Activities.DataBaseSQL.SqlExecuteQuery</_activityFullName>
+                  </AbstractStep>
+                  <AbstractStep z:Id="i16" i:type="ExecutedStep">
+                    <Childs />
+                    <Id>eb61d208-3fc6-46c5-9825-ab7bead886d9</Id>
+                    <Parent z:Ref="i10" />
+                    <PropertyValues>
+                      <PropertyValue z:Id="i17">
+                        <PropertyName>Separator</PropertyName>
+                        <_dataType>Value</_dataType>
+                        <_expression i:nil="true" />
+                        <_screenShotBase64 i:nil="true" />
+                        <_value xmlns:d13p1="http://schemas.datacontract.org/2004/07/Activities.BaseCollections.DataTable.Logic.Enums" i:type="d13p1:TypeSeparator">Pipe</_value>
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                      <PropertyValue z:Id="i18">
+                        <PropertyName>Output</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>vTableToString</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                      <PropertyValue z:Id="i19">
+                        <PropertyName>BaseDataTable</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>vTableParameters</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                    </PropertyValues>
+                    <SelectedOptionId>0</SelectedOptionId>
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>Activities.BaseCollections.DT.OutputDataTable</_activityFullName>
+                  </AbstractStep>
+                  <AbstractStep z:Id="i20" i:type="ExecutedStep">
+                    <Childs />
+                    <Id>8ad7798c-6213-408e-a599-c7bb8ca63ec3</Id>
+                    <Parent z:Ref="i10" />
+                    <PropertyValues>
+                      <PropertyValue z:Id="i21">
+                        <PropertyName>IncomingString</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>vTableToString</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                      <PropertyValue z:Id="i22">
+                        <PropertyName>RegExpression</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>@"(?m)(?&lt;=\|)[^\r\n]*"</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                      <PropertyValue z:Id="i23">
+                        <PropertyName>Timeout</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>100</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                      <PropertyValue z:Id="i24">
+                        <PropertyName>Result</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>vStrParametros</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                      <PropertyValue z:Id="i25">
+                        <PropertyName>ResultList</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>vStrParameters</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                    </PropertyValues>
+                    <SelectedOptionId>1</SelectedOptionId>
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>Activities.Strings.RegEx</_activityFullName>
+                  </AbstractStep>
+                  <AbstractStep z:Id="i26" i:type="CommentStep">
+                    <Childs />
+                    <Id>5be5db32-9816-43fa-ad8a-3b95ad07f3ba</Id>
+                    <Parent z:Ref="i10" />
+                    <PropertyValues />
+                    <SelectedOptionId i:nil="true" />
+                    <IsCollapsed>false</IsCollapsed>
+                    <Text>Get file
+</Text>
+                  </AbstractStep>
+                  <AbstractStep z:Id="i27" i:type="ExecutedStep">
+                    <Childs />
+                    <Id>1ab55b70-486c-4de5-a7a7-a5236526196b</Id>
+                    <Parent z:Ref="i10" />
+                    <PropertyValues>
+                      <PropertyValue z:Id="i28">
+                        <PropertyName>FileDirectoryPath</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>vStrParameters.ElementAtOrDefault(3)+vStrParameters.ElementAtOrDefault(1);</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                      <PropertyValue z:Id="i29">
+                        <PropertyName>Result</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>vBooValidator</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                    </PropertyValues>
+                    <SelectedOptionId i:nil="true" />
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>Activities.Files.PathExist</_activityFullName>
+                  </AbstractStep>
+                  <AbstractStep z:Id="i30" i:type="ExecutedStep">
+                    <Childs>
+                      <AbstractStep z:Id="i31" i:type="ExecutedStep">
+                        <Childs>
+                          <AbstractStep z:Id="i32" i:type="CommentStep">
+                            <Childs />
+                            <Id>47da7ccc-5ae7-4399-b997-01dabbd2976a</Id>
+                            <Parent z:Ref="i31" />
+                            <PropertyValues />
+                            <SelectedOptionId i:nil="true" />
+                            <IsCollapsed>false</IsCollapsed>
+                            <Text>Read json
+</Text>
+                          </AbstractStep>
+                          <AbstractStep z:Id="i33" i:type="ExecutedStep">
+                            <Childs />
+                            <Id>deee7d1f-416c-4447-9479-6fa8343f6ebe</Id>
+                            <Parent z:Ref="i31" />
+                            <PropertyValues>
+                              <PropertyValue z:Id="i34">
+                                <PropertyName>FilePath</PropertyName>
+                                <_dataType>Expression</_dataType>
+                                <_expression>vStrParameters.ElementAtOrDefault(3)+vStrParameters.ElementAtOrDefault(1);</_expression>
+                                <_screenShotBase64 i:nil="true" />
+                                <_value i:nil="true" />
+                                <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                              </PropertyValue>
+                              <PropertyValue z:Id="i35">
+                                <PropertyName>Content</PropertyName>
+                                <_dataType>Expression</_dataType>
+                                <_expression>vStrBody</_expression>
+                                <_screenShotBase64 i:nil="true" />
+                                <_value i:nil="true" />
+                                <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                              </PropertyValue>
+                            </PropertyValues>
+                            <SelectedOptionId i:nil="true" />
+                            <AutoCloseMode>None</AutoCloseMode>
+                            <EnableStatus>true</EnableStatus>
+                            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                            <RetryCount>-1</RetryCount>
+                            <Text></Text>
+                            <_activityFullName>Activities.Files.ReadFile</_activityFullName>
+                          </AbstractStep>
+                          <AbstractStep z:Id="i36" i:type="ExecutedStep">
+                            <Childs />
+                            <Id>d2fbd506-86c7-4828-9747-cf88c053e3ba</Id>
+                            <Parent z:Ref="i31" />
+                            <PropertyValues>
+                              <PropertyValue z:Id="i37">
+                                <PropertyName>JSONString</PropertyName>
+                                <_dataType>Expression</_dataType>
+                                <_expression>vStrBody</_expression>
+                                <_screenShotBase64 i:nil="true" />
+                                <_value i:nil="true" />
+                                <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                              </PropertyValue>
+                              <PropertyValue z:Id="i38">
+                                <PropertyName>Result</PropertyName>
+                                <_dataType>Expression</_dataType>
+                                <_expression>jsonObject</_expression>
+                                <_screenShotBase64 i:nil="true" />
+                                <_value i:nil="true" />
+                                <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                              </PropertyValue>
+                            </PropertyValues>
+                            <SelectedOptionId i:nil="true" />
+                            <AutoCloseMode>None</AutoCloseMode>
+                            <EnableStatus>true</EnableStatus>
+                            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                            <RetryCount>-1</RetryCount>
+                            <Text i:nil="true" />
+                            <_activityFullName>Activities.Parsing.JSONParsing</_activityFullName>
+                          </AbstractStep>
+                          <AbstractStep z:Id="i39" i:type="ExecutedStep">
+                            <Childs>
+                              <AbstractStep z:Id="i40" i:type="ExecutedStep">
+                                <Childs />
+                                <Id>26a29822-cb54-4852-80e9-0b8aca0529ba</Id>
+                                <Parent z:Ref="i39" />
+                                <PropertyValues>
+                                  <PropertyValue z:Id="i41">
+                                    <PropertyName>JSONElement</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>jsonObject.EnumerateArray().ElementAt(vIntCount-1);</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i42">
+                                    <PropertyName>PropertyName</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>"id"</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i43">
+                                    <PropertyName>PropertyValue</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vStrId</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i44">
+                                    <PropertyName>ValueKind</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>Type</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                </PropertyValues>
+                                <SelectedOptionId i:nil="true" />
+                                <AutoCloseMode>None</AutoCloseMode>
+                                <EnableStatus>true</EnableStatus>
+                                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                                <RetryCount>-1</RetryCount>
+                                <Text></Text>
+                                <_activityFullName>Activities.Parsing.JSONElementGetProperty</_activityFullName>
+                              </AbstractStep>
+                              <AbstractStep z:Id="i45" i:type="ExecutedStep">
+                                <Childs />
+                                <Id>853f26da-96c7-407d-bfaa-557140cd2b4a</Id>
+                                <Parent z:Ref="i39" />
+                                <PropertyValues>
+                                  <PropertyValue z:Id="i46">
+                                    <PropertyName>JSONElement</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>jsonObject.EnumerateArray().ElementAt(vIntCount-1);</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i47">
+                                    <PropertyName>PropertyName</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>"title"</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i48">
+                                    <PropertyName>PropertyValue</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vStrTitle</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i49">
+                                    <PropertyName>ValueKind</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>Type</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                </PropertyValues>
+                                <SelectedOptionId i:nil="true" />
+                                <AutoCloseMode>None</AutoCloseMode>
+                                <EnableStatus>true</EnableStatus>
+                                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                                <RetryCount>-1</RetryCount>
+                                <Text></Text>
+                                <_activityFullName>Activities.Parsing.JSONElementGetProperty</_activityFullName>
+                              </AbstractStep>
+                              <AbstractStep z:Id="i50" i:type="ExecutedStep">
+                                <Childs />
+                                <Id>e68fa6ee-bad7-470b-a529-71f5e6a2354d</Id>
+                                <Parent z:Ref="i39" />
+                                <PropertyValues>
+                                  <PropertyValue z:Id="i51">
+                                    <PropertyName>JSONElement</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>jsonObject.EnumerateArray().ElementAt(vIntCount-1);</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i52">
+                                    <PropertyName>PropertyName</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>"price"</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i53">
+                                    <PropertyName>PropertyValue</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vStrPrice</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i54">
+                                    <PropertyName>ValueKind</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>Type</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                </PropertyValues>
+                                <SelectedOptionId i:nil="true" />
+                                <AutoCloseMode>None</AutoCloseMode>
+                                <EnableStatus>true</EnableStatus>
+                                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                                <RetryCount>-1</RetryCount>
+                                <Text></Text>
+                                <_activityFullName>Activities.Parsing.JSONElementGetProperty</_activityFullName>
+                              </AbstractStep>
+                              <AbstractStep z:Id="i55" i:type="ExecutedStep">
+                                <Childs />
+                                <Id>79caaedd-a133-4c9e-b283-cc7917446fca</Id>
+                                <Parent z:Ref="i39" />
+                                <PropertyValues>
+                                  <PropertyValue z:Id="i56">
+                                    <PropertyName>JSONElement</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>jsonObject.EnumerateArray().ElementAt(vIntCount-1);</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i57">
+                                    <PropertyName>PropertyName</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>"category"</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i58">
+                                    <PropertyName>PropertyValue</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vStrCategory</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i59">
+                                    <PropertyName>ValueKind</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>Type</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                </PropertyValues>
+                                <SelectedOptionId i:nil="true" />
+                                <AutoCloseMode>None</AutoCloseMode>
+                                <EnableStatus>true</EnableStatus>
+                                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                                <RetryCount>-1</RetryCount>
+                                <Text></Text>
+                                <_activityFullName>Activities.Parsing.JSONElementGetProperty</_activityFullName>
+                              </AbstractStep>
+                              <AbstractStep z:Id="i60" i:type="ExecutedStep">
+                                <Childs />
+                                <Id>cbe1194c-7c29-4744-a3a6-3420bfdb6e87</Id>
+                                <Parent z:Ref="i39" />
+                                <PropertyValues>
+                                  <PropertyValue z:Id="i61">
+                                    <PropertyName>JSONElement</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>jsonObject.EnumerateArray().ElementAt(vIntCount-1);</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i62">
+                                    <PropertyName>PropertyName</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>"description"</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i63">
+                                    <PropertyName>PropertyValue</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vStrDescription</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i64">
+                                    <PropertyName>ValueKind</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>Type</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                </PropertyValues>
+                                <SelectedOptionId i:nil="true" />
+                                <AutoCloseMode>None</AutoCloseMode>
+                                <EnableStatus>true</EnableStatus>
+                                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                                <RetryCount>-1</RetryCount>
+                                <Text></Text>
+                                <_activityFullName>Activities.Parsing.JSONElementGetProperty</_activityFullName>
+                              </AbstractStep>
+                              <AbstractStep z:Id="i65" i:type="ExecutedStep">
+                                <Childs />
+                                <Id>bfc51bdb-7924-4cd1-8c9d-40e47d0866c6</Id>
+                                <Parent z:Ref="i39" />
+                                <PropertyValues>
+                                  <PropertyValue z:Id="i66">
+                                    <PropertyName>СonvertibleString</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vStrPrice</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i67">
+                                    <PropertyName>Replaceable</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>"."</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i68">
+                                    <PropertyName>Modified</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>"."</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i69">
+                                    <PropertyName>Result</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vStrPrice</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                </PropertyValues>
+                                <SelectedOptionId i:nil="true" />
+                                <AutoCloseMode>None</AutoCloseMode>
+                                <EnableStatus>false</EnableStatus>
+                                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                                <RetryCount>-1</RetryCount>
+                                <Text></Text>
+                                <_activityFullName>Activities.Strings.ChangeString</_activityFullName>
+                              </AbstractStep>
+                              <AbstractStep z:Id="i70" i:type="ExecutedStep">
+                                <Childs />
+                                <Id>33777913-58ae-4e2c-86f3-ba1be46686f8</Id>
+                                <Parent z:Ref="i39" />
+                                <PropertyValues>
+                                  <PropertyValue z:Id="i71">
+                                    <PropertyName>СonvertibleString</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vStrTitle</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i72">
+                                    <PropertyName>Replaceable</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>"'"</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i73">
+                                    <PropertyName>Modified</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>""</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i74">
+                                    <PropertyName>Result</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vStrTitle</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                </PropertyValues>
+                                <SelectedOptionId i:nil="true" />
+                                <AutoCloseMode>None</AutoCloseMode>
+                                <EnableStatus>true</EnableStatus>
+                                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                                <RetryCount>-1</RetryCount>
+                                <Text></Text>
+                                <_activityFullName>Activities.Strings.ChangeString</_activityFullName>
+                              </AbstractStep>
+                              <AbstractStep z:Id="i75" i:type="ExecutedStep">
+                                <Childs />
+                                <Id>71bcda14-24a9-472c-855c-116e8cf2c3ac</Id>
+                                <Parent z:Ref="i39" />
+                                <PropertyValues>
+                                  <PropertyValue z:Id="i76">
+                                    <PropertyName>СonvertibleString</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vStrDescription</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i77">
+                                    <PropertyName>Replaceable</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>"'"</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i78">
+                                    <PropertyName>Modified</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>""</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i79">
+                                    <PropertyName>Result</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vStrDescription</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                </PropertyValues>
+                                <SelectedOptionId i:nil="true" />
+                                <AutoCloseMode>None</AutoCloseMode>
+                                <EnableStatus>true</EnableStatus>
+                                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                                <RetryCount>-1</RetryCount>
+                                <Text></Text>
+                                <_activityFullName>Activities.Strings.ChangeString</_activityFullName>
+                              </AbstractStep>
+                              <AbstractStep z:Id="i80" i:type="ExecutedStep">
+                                <Childs />
+                                <Id>2c575759-9ddc-4245-b6fe-bf946e92b697</Id>
+                                <Parent z:Ref="i39" />
+                                <PropertyValues>
+                                  <PropertyValue z:Id="i81">
+                                    <PropertyName>СonvertibleString</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vStrCategory</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i82">
+                                    <PropertyName>Replaceable</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>"'"</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i83">
+                                    <PropertyName>Modified</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>""</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i84">
+                                    <PropertyName>Result</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vStrCategory</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                </PropertyValues>
+                                <SelectedOptionId i:nil="true" />
+                                <AutoCloseMode>None</AutoCloseMode>
+                                <EnableStatus>true</EnableStatus>
+                                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                                <RetryCount>-1</RetryCount>
+                                <Text></Text>
+                                <_activityFullName>Activities.Strings.ChangeString</_activityFullName>
+                              </AbstractStep>
+                              <AbstractStep z:Id="i85" i:type="CommentStep">
+                                <Childs />
+                                <Id>1204356d-0a6a-45b3-a39c-e0f9b965b8bd</Id>
+                                <Parent z:Ref="i39" />
+                                <PropertyValues />
+                                <SelectedOptionId i:nil="true" />
+                                <IsCollapsed>false</IsCollapsed>
+                                <Text>Validate Duplicity
+</Text>
+                              </AbstractStep>
+                              <AbstractStep z:Id="i86" i:type="ExecutedStep">
+                                <Childs />
+                                <Id>4e5733bc-59f5-417c-8f0a-bfd6c7db7a38</Id>
+                                <Parent z:Ref="i39" />
+                                <PropertyValues>
+                                  <PropertyValue z:Id="i87">
+                                    <PropertyName>Result</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vTblResult</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i88">
+                                    <PropertyName>InSqlConnection</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>Success</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i89">
+                                    <PropertyName>SqlQuery</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>"SELECT COUNT(*) AS cnt FROM [PruebaTecnica].[dbo].[Productos] WHERE id =TRY_CONVERT(int, "+vStrId+") AND title='"+vStrTitle+"';"</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                </PropertyValues>
+                                <SelectedOptionId>0</SelectedOptionId>
+                                <AutoCloseMode>None</AutoCloseMode>
+                                <EnableStatus>true</EnableStatus>
+                                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                                <RetryCount>-1</RetryCount>
+                                <Text></Text>
+                                <_activityFullName>Activities.DataBaseSQL.SqlExecuteQuery</_activityFullName>
+                              </AbstractStep>
+                              <AbstractStep z:Id="i90" i:type="ExecutedStep">
+                                <Childs />
+                                <Id>89303c9b-aa73-4af1-98d2-ce4d0ce32a6f</Id>
+                                <Parent z:Ref="i39" />
+                                <PropertyValues>
+                                  <PropertyValue z:Id="i91">
+                                    <PropertyName>Separator</PropertyName>
+                                    <_dataType>Value</_dataType>
+                                    <_expression i:nil="true" />
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value xmlns:d19p1="http://schemas.datacontract.org/2004/07/Activities.BaseCollections.DataTable.Logic.Enums" i:type="d19p1:TypeSeparator">Pipe</_value>
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i92">
+                                    <PropertyName>Output</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vStrResult</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i93">
+                                    <PropertyName>BaseDataTable</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vTblResult</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                </PropertyValues>
+                                <SelectedOptionId>0</SelectedOptionId>
+                                <AutoCloseMode>None</AutoCloseMode>
+                                <EnableStatus>true</EnableStatus>
+                                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                                <RetryCount>-1</RetryCount>
+                                <Text></Text>
+                                <_activityFullName>Activities.BaseCollections.DT.OutputDataTable</_activityFullName>
+                              </AbstractStep>
+                              <AbstractStep z:Id="i94" i:type="ExecutedStep">
+                                <Childs />
+                                <Id>9b5cffda-069a-4c1f-a33c-ebdd441bc57c</Id>
+                                <Parent z:Ref="i39" />
+                                <PropertyValues>
+                                  <PropertyValue z:Id="i95">
+                                    <PropertyName>СonvertibleString</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vStrResult</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i96">
+                                    <PropertyName>Replaceable</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>"cnt\r"</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i97">
+                                    <PropertyName>Modified</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>""</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i98">
+                                    <PropertyName>Result</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vStrResult</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                </PropertyValues>
+                                <SelectedOptionId i:nil="true" />
+                                <AutoCloseMode>None</AutoCloseMode>
+                                <EnableStatus>true</EnableStatus>
+                                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                                <RetryCount>-1</RetryCount>
+                                <Text></Text>
+                                <_activityFullName>Activities.Strings.ChangeString</_activityFullName>
+                              </AbstractStep>
+                              <AbstractStep z:Id="i99" i:type="ExecutedStep">
+                                <Childs />
+                                <Id>c37c3c69-0bcf-4a3b-b60c-467534cdbf16</Id>
+                                <Parent z:Ref="i39" />
+                                <PropertyValues>
+                                  <PropertyValue z:Id="i100">
+                                    <PropertyName>IncomingString</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vStrResult.ToString()</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i101">
+                                    <PropertyName>RegExpression</PropertyName>
+                                    <_dataType>Value</_dataType>
+                                    <_expression i:nil="true" />
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value xmlns:d19p1="http://www.w3.org/2001/XMLSchema" i:type="d19p1:string">^\s*\+?0+\s*$</_value>
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i102">
+                                    <PropertyName>Timeout</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vIntCount</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i103">
+                                    <PropertyName>Result</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vBooValidator</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                </PropertyValues>
+                                <SelectedOptionId>0</SelectedOptionId>
+                                <AutoCloseMode>None</AutoCloseMode>
+                                <EnableStatus>true</EnableStatus>
+                                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                                <RetryCount>-1</RetryCount>
+                                <Text></Text>
+                                <_activityFullName>Activities.Strings.RegEx</_activityFullName>
+                              </AbstractStep>
+                              <AbstractStep z:Id="i104" i:type="ExecutedStep">
+                                <Childs>
+                                  <AbstractStep z:Id="i105" i:type="ExecutedStep">
+                                    <Childs>
+                                      <AbstractStep z:Id="i106" i:type="CommentStep">
+                                        <Childs />
+                                        <Id>80277525-4848-42f6-b6ee-817703acee51</Id>
+                                        <Parent z:Ref="i105" />
+                                        <PropertyValues />
+                                        <SelectedOptionId i:nil="true" />
+                                        <IsCollapsed>false</IsCollapsed>
+                                        <Text>New data to insert
+</Text>
+                                      </AbstractStep>
+                                      <AbstractStep z:Id="i107" i:type="ExecutedStep">
+                                        <Childs />
+                                        <Id>d892c3c8-6d7f-486f-b9ae-80045af523a4</Id>
+                                        <Parent z:Ref="i105" />
+                                        <PropertyValues>
+                                          <PropertyValue z:Id="i108">
+                                            <PropertyName>AffectedRecords</PropertyName>
+                                            <_dataType>Expression</_dataType>
+                                            <_expression></_expression>
+                                            <_screenShotBase64 i:nil="true" />
+                                            <_value i:nil="true" />
+                                            <_xpathSettings xmlns:d23p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                          </PropertyValue>
+                                          <PropertyValue z:Id="i109">
+                                            <PropertyName>InSqlConnection</PropertyName>
+                                            <_dataType>Expression</_dataType>
+                                            <_expression>Success</_expression>
+                                            <_screenShotBase64 i:nil="true" />
+                                            <_value i:nil="true" />
+                                            <_xpathSettings xmlns:d23p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                          </PropertyValue>
+                                          <PropertyValue z:Id="i110">
+                                            <PropertyName>SqlQuery</PropertyName>
+                                            <_dataType>Expression</_dataType>
+                                            <_expression>"INSERT INTO [PruebaTecnica].[dbo].[Productos] (id, title, price, category, [description]) VALUES ( TRY_CONVERT(int, '"+vStrId+"'), '"+vStrTitle+"', TRY_CONVERT(decimal(18,2), REPLACE('"+vStrPrice+"', ',', '.')), '"+vStrCategory+"', '"+vStrDescription+"');"</_expression>
+                                            <_screenShotBase64 i:nil="true" />
+                                            <_value i:nil="true" />
+                                            <_xpathSettings xmlns:d23p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                          </PropertyValue>
+                                        </PropertyValues>
+                                        <SelectedOptionId>0</SelectedOptionId>
+                                        <AutoCloseMode>None</AutoCloseMode>
+                                        <EnableStatus>true</EnableStatus>
+                                        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                                        <RetryCount>-1</RetryCount>
+                                        <Text></Text>
+                                        <_activityFullName>Activities.DataBaseSQL.SqlExecuteNonQuery</_activityFullName>
+                                      </AbstractStep>
+                                      <AbstractStep z:Id="i111" i:type="ExecutedStep">
+                                        <Childs />
+                                        <Id>7acb7a3e-196e-4153-a194-58a5ff47a5bd</Id>
+                                        <Parent z:Ref="i105" />
+                                        <PropertyValues>
+                                          <PropertyValue z:Id="i112">
+                                            <PropertyName>Text</PropertyName>
+                                            <_dataType>Expression</_dataType>
+                                            <_expression>"New register added   "+"INSERT INTO [PruebaTecnica].[dbo].[Productos] (id, title, price, category, [description]) VALUES ( TRY_CONVERT(int, '"+vStrId+"'), '"+vStrTitle+"', TRY_CONVERT(decimal(18,2), REPLACE('"+vStrPrice+"', ',', '.')), '"+vStrCategory+"', '"+vStrDescription+"');"</_expression>
+                                            <_screenShotBase64 i:nil="true" />
+                                            <_value i:nil="true" />
+                                            <_xpathSettings xmlns:d23p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                          </PropertyValue>
+                                        </PropertyValues>
+                                        <SelectedOptionId i:nil="true" />
+                                        <AutoCloseMode>None</AutoCloseMode>
+                                        <EnableStatus>true</EnableStatus>
+                                        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                                        <RetryCount>-1</RetryCount>
+                                        <Text></Text>
+                                        <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+                                      </AbstractStep>
+                                    </Childs>
+                                    <Id>2600c258-b6e0-4a23-9ac4-c4c6351f0512</Id>
+                                    <Parent z:Ref="i104" />
+                                    <PropertyValues />
+                                    <SelectedOptionId i:nil="true" />
+                                    <AutoCloseMode>None</AutoCloseMode>
+                                    <EnableStatus>true</EnableStatus>
+                                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                                    <RetryCount>-1</RetryCount>
+                                    <Text></Text>
+                                    <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
+                                  </AbstractStep>
+                                  <AbstractStep z:Id="i113" i:type="ExecutedStep">
+                                    <Childs />
+                                    <Id>b129d65b-f92f-4252-9c8c-6150f66db997</Id>
+                                    <Parent z:Ref="i104" />
+                                    <PropertyValues />
+                                    <SelectedOptionId i:nil="true" />
+                                    <AutoCloseMode>None</AutoCloseMode>
+                                    <EnableStatus>true</EnableStatus>
+                                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                                    <RetryCount>-1</RetryCount>
+                                    <Text></Text>
+                                    <_activityFullName>BR.Core.Base.IfFalse</_activityFullName>
+                                  </AbstractStep>
+                                </Childs>
+                                <Id>1d2affa0-fa78-4f38-9a77-009cba2ebd1f</Id>
+                                <Parent z:Ref="i39" />
+                                <PropertyValues>
+                                  <PropertyValue z:Id="i114">
+                                    <PropertyName>Condition</PropertyName>
+                                    <_dataType>Expression</_dataType>
+                                    <_expression>vBooValidator</_expression>
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                </PropertyValues>
+                                <SelectedOptionId i:nil="true" />
+                                <AutoCloseMode>None</AutoCloseMode>
+                                <EnableStatus>true</EnableStatus>
+                                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                                <RetryCount>-1</RetryCount>
+                                <Text></Text>
+                                <_activityFullName>BR.Core.Base.If</_activityFullName>
+                              </AbstractStep>
+                            </Childs>
+                            <Id>e9c6eeaa-aba0-407c-b120-6e9ffe316778</Id>
+                            <Parent z:Ref="i31" />
+                            <PropertyValues>
+                              <PropertyValue z:Id="i115">
+                                <PropertyName>Collection</PropertyName>
+                                <_dataType>Expression</_dataType>
+                                <_expression>jsonObject.EnumerateArray()</_expression>
+                                <_screenShotBase64 i:nil="true" />
+                                <_value i:nil="true" />
+                                <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                              </PropertyValue>
+                              <PropertyValue z:Id="i116">
+                                <PropertyName>Iterator</PropertyName>
+                                <_dataType>Expression</_dataType>
+                                <_expression>item</_expression>
+                                <_screenShotBase64 i:nil="true" />
+                                <_value i:nil="true" />
+                                <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                              </PropertyValue>
+                              <PropertyValue z:Id="i117">
+                                <PropertyName>Counter</PropertyName>
+                                <_dataType>Expression</_dataType>
+                                <_expression>vIntCount</_expression>
+                                <_screenShotBase64 i:nil="true" />
+                                <_value i:nil="true" />
+                                <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                              </PropertyValue>
+                            </PropertyValues>
+                            <SelectedOptionId i:nil="true" />
+                            <AutoCloseMode>None</AutoCloseMode>
+                            <EnableStatus>true</EnableStatus>
+                            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                            <RetryCount>-1</RetryCount>
+                            <Text i:nil="true" />
+                            <_activityFullName>BR.Core.Base.LoopForEach</_activityFullName>
+                          </AbstractStep>
+                        </Childs>
+                        <Id>8ca65c0c-87de-4798-9b13-60be6b10cb94</Id>
+                        <Parent z:Ref="i30" />
+                        <PropertyValues />
+                        <SelectedOptionId i:nil="true" />
+                        <AutoCloseMode>None</AutoCloseMode>
+                        <EnableStatus>true</EnableStatus>
+                        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                        <RetryCount>-1</RetryCount>
+                        <Text></Text>
+                        <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
+                      </AbstractStep>
+                      <AbstractStep z:Id="i118" i:type="ExecutedStep">
+                        <Childs>
+                          <AbstractStep z:Id="i119" i:type="ExecutedStep">
+                            <Childs />
+                            <Id>02d5537a-f1ff-410c-98a1-7a4367934ee6</Id>
+                            <Parent z:Ref="i118" />
+                            <PropertyValues>
+                              <PropertyValue z:Id="i120">
+                                <PropertyName>Text</PropertyName>
+                                <_dataType>Expression</_dataType>
+                                <_expression>"Unable to locate file, please try again"</_expression>
+                                <_screenShotBase64 i:nil="true" />
+                                <_value i:nil="true" />
+                                <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                              </PropertyValue>
+                            </PropertyValues>
+                            <SelectedOptionId i:nil="true" />
+                            <AutoCloseMode>None</AutoCloseMode>
+                            <EnableStatus>true</EnableStatus>
+                            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                            <RetryCount>-1</RetryCount>
+                            <Text></Text>
+                            <_activityFullName>Activities.Interactive.MessageBox</_activityFullName>
+                          </AbstractStep>
+                          <AbstractStep z:Id="i121" i:type="ExecutedStep">
+                            <Childs />
+                            <Id>f8a3877e-f0bf-43ac-87f4-8c406d796a80</Id>
+                            <Parent z:Ref="i118" />
+                            <PropertyValues>
+                              <PropertyValue z:Id="i122">
+                                <PropertyName>Text</PropertyName>
+                                <_dataType>Expression</_dataType>
+                                <_expression>"Unable to locate file, please try again"</_expression>
+                                <_screenShotBase64 i:nil="true" />
+                                <_value i:nil="true" />
+                                <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                              </PropertyValue>
+                              <PropertyValue z:Id="i123">
+                                <PropertyName>Level</PropertyName>
+                                <_dataType>Value</_dataType>
+                                <_expression i:nil="true" />
+                                <_screenShotBase64 i:nil="true" />
+                                <_value xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.Core.Base" i:type="d17p1:LogLevel">Error</_value>
+                                <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                              </PropertyValue>
+                            </PropertyValues>
+                            <SelectedOptionId i:nil="true" />
+                            <AutoCloseMode>None</AutoCloseMode>
+                            <EnableStatus>true</EnableStatus>
+                            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                            <RetryCount>-1</RetryCount>
+                            <Text></Text>
+                            <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+                          </AbstractStep>
+                        </Childs>
+                        <Id>55ef1f96-ac05-4a6e-b4eb-0fae204bd19a</Id>
+                        <Parent z:Ref="i30" />
+                        <PropertyValues />
+                        <SelectedOptionId i:nil="true" />
+                        <AutoCloseMode>None</AutoCloseMode>
+                        <EnableStatus>true</EnableStatus>
+                        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                        <RetryCount>-1</RetryCount>
+                        <Text></Text>
+                        <_activityFullName>BR.Core.Base.IfFalse</_activityFullName>
+                      </AbstractStep>
+                    </Childs>
+                    <Id>01c63573-95f8-48c5-9ce0-02ee71f1243e</Id>
+                    <Parent z:Ref="i10" />
+                    <PropertyValues>
+                      <PropertyValue z:Id="i124">
+                        <PropertyName>Condition</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>vBooValidator</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                    </PropertyValues>
+                    <SelectedOptionId i:nil="true" />
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>BR.Core.Base.If</_activityFullName>
+                  </AbstractStep>
+                </Childs>
+                <Id>e756a3ab-9832-408f-9fa5-00834fe8edf2</Id>
+                <Parent z:Ref="i4" />
+                <PropertyValues />
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text>Functions database compare</Text>
+                <_activityFullName>BR.Core.Base.Container</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i125" i:type="ExecutedStep">
+                <Childs />
+                <Id>c67d5f31-511d-408a-9b3b-1cd75b0a5cd9</Id>
+                <Parent z:Ref="i4" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i126">
+                    <PropertyName>InSqlConnection</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>Success</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text>Remove DB connection</Text>
+                <_activityFullName>Activities.DataBaseSQL.RemoveConnection</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i127" i:type="ExecutedStep">
+                <Childs />
+                <Id>2f2cdfd6-c825-4a36-884a-8eaf212f9150</Id>
+                <Parent z:Ref="i4" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i128">
+                    <PropertyName>Text</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"New field's added"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>c59cbac9-2a61-4196-8d20-678c86987b83</Id>
+            <Parent z:Ref="i3" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Try</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i129" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i130" i:type="ExecutedStep">
+                <Childs />
+                <Id>f9c7bfa5-b565-4318-b44c-821b3fa0887d</Id>
+                <Parent z:Ref="i129" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i131">
+                    <PropertyName>Text</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"Error en " + oStrSoruce + " con descripccion " + oStrErrorMessage + " en linea "+ oStrStackMessage</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i132">
+                    <PropertyName>Title</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"Error"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text>error</Text>
+                <_activityFullName>Activities.Interactive.MessageBox</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i133" i:type="ExecutedStep">
+                <Childs />
+                <Id>10b4cd59-5b07-490e-9725-4f661643c243</Id>
+                <Parent z:Ref="i129" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i134">
+                    <PropertyName>Level</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.Core.Base" i:type="d11p1:LogLevel">Error</_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i135">
+                    <PropertyName>Text</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"Error en " + oStrSoruce + " con descripccion " + oStrErrorMessage + " en linea "+ oStrStackMessage</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>a33b4bc3-d4a5-4a05-b34c-fe081eb4891e</Id>
+            <Parent z:Ref="i3" />
+            <PropertyValues>
+              <PropertyValue z:Id="i136">
+                <PropertyName>Message</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>oStrErrorMessage</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i137">
+                <PropertyName>StackTrace</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>oStrStackMessage</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i138">
+                <PropertyName>Source</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>oStrSoruce</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Catch</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i139" i:type="ExecutedStep">
+            <Childs />
+            <Id>d4126ff8-f738-407b-b724-8dbcae52bf7f</Id>
+            <Parent z:Ref="i3" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Finally</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>26748dbf-c658-4601-a427-43dfd74e21d1</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues />
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text></Text>
+        <_activityFullName>BR.Core.Base.TryCatch</_activityFullName>
+      </AbstractStep>
+    </Childs>
+    <Id>98999ca0-d503-4fba-87de-481873ec5022</Id>
+    <Parent i:nil="true" />
+    <PropertyValues />
+    <SelectedOptionId i:nil="true" />
+    <AutoCloseMode>None</AutoCloseMode>
+    <EnableStatus>true</EnableStatus>
+    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+    <RetryCount>-1</RetryCount>
+    <Text i:nil="true" />
+    <_activityFullName>BR.Core.Base.Container</_activityFullName>
+  </Logic>
+  <Name>JsonToDatabase.pix</Name>
+  <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <Params>
+    <Parameter z:Id="i140">
+      <DefaultValueExpression>@"Data Source=DESKTOP-P0516AS;Initial Catalog=PruebaTecnica;Integrated Security=True"</DefaultValueExpression>
+      <Description></Description>
+      <Name>SQLConection</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>System.String</TypeString>
+    </Parameter>
+  </Params>
+  <PlatformVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+    <d2p1:_Build>4</d2p1:_Build>
+    <d2p1:_Major>2</d2p1:_Major>
+    <d2p1:_Minor>27</d2p1:_Minor>
+    <d2p1:_Revision>0</d2p1:_Revision>
+  </PlatformVersion>
+  <TemplateVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" i:nil="true" />
+  <Variables xmlns:d2p1="http://schemas.datacontract.org/2004/07/BR.Logic.Params" />
+  <Version i:nil="true" />
+</Script>
